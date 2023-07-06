@@ -9,6 +9,24 @@ function api_docs_schema_retrieve(payload) {
 function api_v1_login_create(payload) {
   return davedevAPI.post(`/api/v1/login/`, payload.data)
 }
+function api_v1_pet_list(payload) {
+  return davedevAPI.get(`/api/v1/pet/`)
+}
+function api_v1_pet_create(payload) {
+  return davedevAPI.post(`/api/v1/pet/`, payload.data)
+}
+function api_v1_pet_retrieve(payload) {
+  return davedevAPI.get(`/api/v1/pet/${payload.id}/`)
+}
+function api_v1_pet_update(payload) {
+  return davedevAPI.put(`/api/v1/pet/${payload.id}/`, payload.data)
+}
+function api_v1_pet_partial_update(payload) {
+  return davedevAPI.patch(`/api/v1/pet/${payload.id}/`, payload.data)
+}
+function api_v1_pet_destroy(payload) {
+  return davedevAPI.delete(`/api/v1/pet/${payload.id}/`)
+}
 function api_v1_signup_create(payload) {
   return davedevAPI.post(`/api/v1/signup/`, payload.data)
 }
@@ -48,6 +66,12 @@ function rest_auth_user_partial_update(payload) {
 export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
+  api_v1_pet_list,
+  api_v1_pet_create,
+  api_v1_pet_retrieve,
+  api_v1_pet_update,
+  api_v1_pet_partial_update,
+  api_v1_pet_destroy,
   api_v1_signup_create,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
