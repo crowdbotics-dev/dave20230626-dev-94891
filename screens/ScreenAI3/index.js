@@ -4,7 +4,7 @@ import React from "react";
 import { SafeAreaView, Pressable } from "react-native";
 import { useState } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
-import { api_v1_pet_list } from "../../store/daveAPI/pets.slice.js";
+import { api_v1_pet_list } from "../../store/davedevAPI/pets.slice.js";
 
 const PetGalleryScreen = () => {
   const [pets, setPets] = useState([]);
